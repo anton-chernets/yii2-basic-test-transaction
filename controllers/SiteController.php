@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\components\requests\RequestBase;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -57,11 +58,11 @@ class SiteController extends Controller
     /**
      * Displays homepage.
      *
-     * @return string
+     * @return void
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        Yii::$app->transaction->doCheckTransaction(RequestBase::FORMAT_XML);
     }
 
     /**

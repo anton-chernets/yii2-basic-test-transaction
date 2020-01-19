@@ -51,6 +51,20 @@ $config = [
             ],
         ],
         */
+        'transaction' => [
+            'class' => 'app\components\Transaction',
+            'isTest' => true,
+        ],
+        'mementoEmployer' => [
+            'class' => 'app\components\MementoEmployer'
+        ],
+        'mementoCreditScores' => [
+            'class' => 'app\components\mementoCreditScores',
+            'map' => [
+                'good' => 700,
+                'bad'   => 300
+            ]
+        ],
     ],
     'params' => $params,
 ];
